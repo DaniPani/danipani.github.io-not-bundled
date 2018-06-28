@@ -23,17 +23,5 @@
         "mainFile": "src/components/scroll-down.js",
         "origin": "AUTHORED"
     },
-    "danipani.projects/fa-icon-polymer/fa-icon@1.0.0": {
-        "files": [
-            {
-                "name": "fa-icon.js",
-                "relativePath": "fa-icon.js",
-                "test": false
-            }
-        ],
-        "mainFile": "fa-icon.js",
-        "rootDir": "src/components/fa-icon",
-        "origin": "IMPORTED"
-    },
     "version": "13.0.0"
 }

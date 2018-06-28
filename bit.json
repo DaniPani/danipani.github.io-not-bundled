@@ -1,8 +1,6 @@
 {
     "env": {},
-    "dependencies": {
-        "danipani.projects/fa-icon-polymer/fa-icon": "1.0.0"
-    },
-    "componentsDefaultDirectory": "components/{namespace}/{name}",
+    "dependencies": {},
+    "componentsDefaultDirectory": "src/components/{name}",
     "packageManager": "yarn"
 }
