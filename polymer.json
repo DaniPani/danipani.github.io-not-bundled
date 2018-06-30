@@ -8,7 +8,6 @@
   "builds": [{
     "name":"default",
     "addServiceWorker": true,
-    "insertPrefetchLinks": true,
     "html": {
       "minify": true
     },
@@ -18,5 +17,7 @@
     "js": {
       "minify": true
     }
-  }]
+  }],
+  "entrypoint": "index.html",
+  "shell": "src/danipani.js"
 }
