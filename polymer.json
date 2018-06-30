@@ -4,5 +4,19 @@
     "rules": [
       "polymer-3"
     ]
-  }
+  },
+  "builds": [{
+    "name":"default",
+    "addServiceWorker": true,
+    "insertPrefetchLinks": true,
+    "html": {
+      "minify": true
+    },
+    "css": {
+      "minify": true
+    },
+    "js": {
+      "minify": true
+    }
+  }]
 }

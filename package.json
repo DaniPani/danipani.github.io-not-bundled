@@ -1,6 +1,7 @@
 {
   "name": "danipaniportfolio",
   "dependencies": {
+    "@bit/danipani.projects.fa-icon-polymer.fa-icon": "^1.0.0",
     "@polymer/lit-element": "^0.5.1",
     "@polymer/polymer": "^3.0.0"
   },

@@ -1,6 +1,8 @@
 {
   "name": "DaniPani Portfolio",
-  "short_name": "DaniPani Portfolio",
+  "short_name": "DaniPani",
   "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "theme_color": "#e74c3c",
+  "background_color": "#fff"
 }
