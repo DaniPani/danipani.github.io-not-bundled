@@ -7,7 +7,7 @@ const {
 gulp.task('image', () => gulp.src('./build/default/src/image/*').pipe(image()).pipe(gulp.dest('./build/default/src/image/')))
 gulp.task('manifest', () => gulp.src('./manifest.json').pipe(gulp.dest('./build/default/')))
 
-gulp.task('serve', () => exec('polymer serve build/default', (err, stdout) => console.log(stdout)))
+gulp.task('serve', () => exec('polymer serve build/default -H 192.168.178.25', (err, stdout) => console.log(stdout)))
 gulp.task('build', () => exec('polymer build', (err, stdout) => console.log(stdout)))
 
 gulp.task('clean', () => exec('d: & cd D:\\Projects\\Web\\danipani.github.io\\ &  git rm ./** -f -q --ignore-unmatch'))
