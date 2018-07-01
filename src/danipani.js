@@ -1,11 +1,15 @@
 import {LitElement, html} from '@polymer/lit-element';
-
 import {until} from 'lit-html/lib/until'
 
 import './components/scroll-down.js'
 import './components/social-button.js'
 
 class daniPani extends LitElement {
+
+    async _firstRendered(){
+        this.jump = await import('jump.js')
+        this.jump = this.jump.default
+    }
 
     async _fetchImage(url){
         let response = await fetch(url)
@@ -124,7 +128,7 @@ class daniPani extends LitElement {
             <div class="hero-content">
             <h1>"Hi, I'm Daniel..."</h1>
             </div>
-            <scroll-down></scroll-down>
+            <scroll-down on-click="${e => this.jump(this.shadowRoot.querySelector('.parallax'))}"></scroll-down>
         </section>
         <section class="parallax fixed">
           <div class="parallax-content">
