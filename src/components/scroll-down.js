@@ -35,7 +35,7 @@ class scrollDown extends LitElement {
         box-sizing: border-box;
         }
 
-        .scroll-down:before {
+        .scroll-down::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -43,12 +43,9 @@ class scrollDown extends LitElement {
         width: 44px;
         height: 44px;
         box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
-        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
         border-radius: 100%;
         opacity: 0;
-        -webkit-opacity: 0;
         animation: scrollDownAnimation 3s infinite;
-        -webkit-animation: scrollDownAnimation 3s infinite;
         box-sizing: border-box;
         }
 
@@ -65,23 +62,6 @@ class scrollDown extends LitElement {
         }
         100% {
             opacity: 0;
-        }
-        }
-
-        
-        @-webkit-keyframes scrollDownAnimation {
-        0% {
-            -webkit-opacity: 0;
-        }
-        30% {
-            -webkit-opacity: 1;
-        }
-        60% {
-            -webkit-box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
-            -webkit-opacity: 0;
-        }
-        100% {
-            -webkit-opacity: 0;
         }
         }
         </style>
