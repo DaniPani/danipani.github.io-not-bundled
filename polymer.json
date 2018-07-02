@@ -24,6 +24,8 @@
   "shell": "src/danipani.js",
   "extraDependencies": [
     "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**"
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "robots.txt",
+    "sitemap.xml"
   ]
 }

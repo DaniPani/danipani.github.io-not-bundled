@@ -15,4 +15,4 @@ gulp.task('commit', () => exec(`d: & cd D:\\Projects\\Web\\danipani.github.io\\ 
 
 gulp.task('default', gulp.series('build', gulp.parallel('image', 'serve')))
 
-gulp.task('deploy', gulp.series('build', 'image', 'clean', 'move', 'commit'))
+gulp.task('deploy', gulp.series('build', gulp.parallel('image', 'clean'), 'move', 'commit'))
