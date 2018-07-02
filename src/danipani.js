@@ -7,7 +7,7 @@ import './components/social-button.js'
 class daniPani extends LitElement {
 
     async _firstRendered(){
-        this.jump = await import('jump.js')
+        this.jump = await import('../node_modules/jump.js')
         this.jump = this.jump.default
     }
 

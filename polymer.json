@@ -16,9 +16,14 @@
       "minify": true
     },
     "js": {
-      "minify": true
+      "minify": true,
+      "compile":true
     }
   }],
   "entrypoint": "index.html",
-  "shell": "src/danipani.js"
+  "shell": "src/danipani.js",
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ]
 }
