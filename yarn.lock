@@ -8,7 +8,14 @@
   dependencies:
     "@polymer/lit-element" "^0.5.1"
 
-"@bit/danipani.projects.fa-icon-polymer.fa-icon@^1.0.0":
+"@bit/danipani.projects.components.social-button@^1.1.0":
+  version "1.1.0"
+  resolved "https://node.bitsrc.io/danipani.projects.components.social-button/-/danipani.projects.components.social-button-1.1.0.tgz#0f371ff62e8f5e756dd2b7c09bddb9ae03ddc2aa"
+  dependencies:
+    "@bit/danipani.projects.fa-icon-polymer.fa-icon" "1.0.0"
+    "@polymer/lit-element" "^0.5.1"
+
+"@bit/danipani.projects.fa-icon-polymer.fa-icon@1.0.0":
   version "1.0.0"
   resolved "https://node.bitsrc.io/danipani.projects.fa-icon-polymer.fa-icon/-/danipani.projects.fa-icon-polymer.fa-icon-1.0.0.tgz#cb8be64a4c7a09d0fe62bc52937b45a61d65099a"
   dependencies:

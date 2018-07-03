@@ -1,10 +1,9 @@
 import {LitElement, html} from '@polymer/lit-element';
 
-//TODO: Install socialButton as Bit
 //TODO: Transform button-red to module and install as Bit
 
 import '@bit/danipani.projects.components.scroll-down'
-import './components/social-button.js'
+import '@bit/danipani.projects.components.social-button'
 
 class daniPani extends LitElement {
 

@@ -2,7 +2,7 @@
   "name": "danipaniportfolio",
   "dependencies": {
     "@bit/danipani.projects.components.scroll-down": "^1.0.0",
-    "@bit/danipani.projects.fa-icon-polymer.fa-icon": "^1.0.0",
+    "@bit/danipani.projects.components.social-button": "^1.1.0",
     "@polymer/lit-element": "^0.5.1",
     "@polymer/polymer": "^3.0.0",
     "jump.js": "^1.0.2"
