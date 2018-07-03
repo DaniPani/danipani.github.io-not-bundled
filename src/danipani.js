@@ -1,6 +1,7 @@
 import {LitElement, html} from '@polymer/lit-element';
 
 //TODO: Transform button-red to module and install as Bit
+//TODO: Icon
 
 import '@bit/danipani.projects.components.scroll-down'
 import '@bit/danipani.projects.components.social-button'
