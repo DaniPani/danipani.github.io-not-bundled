@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@bit/danipani.projects.components.button-3d@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bitsrc.io/danipani.projects.components.button-3d/-/danipani.projects.components.button-3d-0.0.1.tgz#5abe379cf2d38841f3a053702382005d63236a1d"
+  dependencies:
+    "@polymer/lit-element" "^0.5.1"
+
 "@bit/danipani.projects.components.scroll-down@^1.0.0":
   version "1.0.0"
   resolved "https://node.bitsrc.io/danipani.projects.components.scroll-down/-/danipani.projects.components.scroll-down-1.0.0.tgz#6dd100b851496db75db027e9d526722737916704"

@@ -5,6 +5,7 @@ import {LitElement, html} from '@polymer/lit-element';
 
 import '@bit/danipani.projects.components.scroll-down'
 import '@bit/danipani.projects.components.social-button'
+import '@bit/danipani.projects.components.button-3d'
 
 class daniPani extends LitElement {
 
@@ -27,6 +28,8 @@ class daniPani extends LitElement {
             --title-font: 3em;
             --subtitle-font: 2.5em;
             --background-attachment: fixed;
+            --btn-3d-background-color: #e74c3c;
+            --btn-3d-box-shadow-color: #CE3323
         }
         @media all and (max-width: 30em) {
             :host {
@@ -62,7 +65,6 @@ class daniPani extends LitElement {
             position: relative;
             background: grey;
             background: ${this._fetchImage('src/image/abstract-wallpaper-1442844111BON.jpg')};
-            background-attachment: var(--background-attachment);
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -79,9 +81,6 @@ class daniPani extends LitElement {
             background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
             background: linear-gradient(to right, #D6A4A4, #DAE2F8);
             padding-top: 20px 
-        }
-        .fixed {
-            background-attachment: scroll 
         }
         .container {
             padding-top: var(--container-padding);
@@ -106,24 +105,6 @@ class daniPani extends LitElement {
         .shadow {
             text-shadow: 6px 4px 1px black;
         }
-        .btn-red {
-            margin: 0;
-            border-radius: 5px;
-            padding: 15px 25px;
-            font-size: 22px;
-            text-decoration: none;
-            margin: 20px;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-            background-color: #e74c3c;
-            box-shadow: 0px 5px 0px 0px #CE3323;
-        }
-        .btn-red:active {
-            transform: translate(0px, 5px);
-            -webkit-transform: translate(0px, 5px);
-            box-shadow: 0px 1px 0px 0px;
-        }
         social-button {
             margin-top: 5vh 
         }
@@ -146,7 +127,7 @@ class daniPani extends LitElement {
               <li>Javascript (ES8), NodeJS, HTML5, VueJS, CSS3, Python...</li>
               <li>In the past: Java Android, Visual Basic, C#</li>
             </ul>
-            <a class="btn-red" href="mailto:panero.daniel@gmail.com">CONTACT ME!</a>
+            <button-3d href="mailto:panero.daniel@gmail.com">CONTACT ME!</button-3d>
           </div>
         </section>
         <section class="gradient">            
