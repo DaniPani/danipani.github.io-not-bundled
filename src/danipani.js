@@ -1,7 +1,9 @@
 import {LitElement, html} from '@polymer/lit-element';
-import {until} from 'lit-html/lib/until'
 
-import './components/scroll-down.js'
+//TODO: Install socialButton as Bit
+//TODO: Transform button-red to module and install as Bit
+
+import '@bit/danipani.projects.components.scroll-down'
 import './components/social-button.js'
 
 class daniPani extends LitElement {
@@ -42,7 +44,8 @@ class daniPani extends LitElement {
         .hero {
             height: 100vh;
             position: relative;
-            background: ${until(this._fetchImage('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg'), `mediumpurple`)};
+            background: mediumpurple;
+            background: ${this._fetchImage('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg')};
             background-attachment: var(--background-attachment);
             background-size: cover;
         }
@@ -57,7 +60,8 @@ class daniPani extends LitElement {
         .parallax {
             height: 50vh;
             position: relative;
-            background: ${until(this._fetchImage('src/image/abstract-wallpaper-1442844111BON.jpg'), `grey`)};
+            background: grey;
+            background: ${this._fetchImage('src/image/abstract-wallpaper-1442844111BON.jpg')};
             background-attachment: var(--background-attachment);
             background-size: cover;
             background-repeat: no-repeat;
