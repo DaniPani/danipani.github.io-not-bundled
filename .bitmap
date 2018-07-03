@@ -12,16 +12,5 @@
         "mainFile": "src/components/social-button.js",
         "origin": "AUTHORED"
     },
-    "danipani.projects/components/scroll-down@1.0.0": {
-        "files": [
-            {
-                "relativePath": "src/components/scroll-down.js",
-                "test": false,
-                "name": "scroll-down.js"
-            }
-        ],
-        "mainFile": "src/components/scroll-down.js",
-        "origin": "AUTHORED"
-    },
     "version": "13.0.0"
 }
