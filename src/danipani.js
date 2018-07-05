@@ -1,6 +1,5 @@
 import {LitElement, html} from '@polymer/lit-element';
 
-//TODO: Transform button-red to module and install as Bit
 //TODO: Icon
 
 import '@bit/danipani.projects.components.scroll-down'
@@ -10,7 +9,7 @@ import '@bit/danipani.projects.components.button-3d'
 class daniPani extends LitElement {
 
     async _firstRendered(){
-        this.jump = await import('../node_modules/jump.js')
+        this.jump = await import('../node_modules/jump.js/dist/jump.module.js')
         this.jump = this.jump.default
     }
 
