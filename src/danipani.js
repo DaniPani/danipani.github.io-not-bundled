@@ -13,10 +13,14 @@ class daniPani extends LitElement {
         this.jump = this.jump.default
     }
 
-    async _fetchImage(url){
+    async _fetchImage(url) {
         let response = await fetch(url)
-        let blob = await response.blob()
-        return `url(${URL.createObjectURL(blob)})`
+        if (response.blob) {
+            let blob = await response.blob()
+            return `url(${URL.createObjectURL(blob)})`
+        } else {
+            return `url(${url})`
+        }
     }
     _render() {
       return html`
