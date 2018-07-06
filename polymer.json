@@ -21,10 +21,9 @@
     }
   }],
   "entrypoint": "index.html",
-  "shell": "src/danipani.js",
   "extraDependencies": [
     "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/@webcomponents/webcomponentsjs/**.js",
     "robots.txt",
     "sitemap.xml"
   ]
