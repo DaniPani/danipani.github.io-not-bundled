@@ -1,12 +1,13 @@
 const gulp = require('gulp')
 const image = require('gulp-image')
+
 const {
   exec
 } = require('child_process');
 
 gulp.task('image', () => gulp.src('./build/default/src/image/*').pipe(image()).pipe(gulp.dest('./build/default/src/image/')))
 
-gulp.task('serve', () => exec('polymer serve build/default', (err, stdout) => console.log(stdout)))
+gulp.task('serve', () => exec('polymer serve build/default', (err, stdout) => console.log(err, stdout)))
 gulp.task('build', () => exec('polymer build', (err, stdout) => console.log(stdout)))
 
 gulp.task('clean', () => exec('d: & cd D:\\Projects\\Web\\danipani.github.io\\ &  git rm ./** -f -q --ignore-unmatch'))
