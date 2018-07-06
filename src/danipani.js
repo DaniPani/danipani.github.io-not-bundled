@@ -50,8 +50,8 @@ class daniPani extends LitElement {
         .hero {
             height: 100vh;
             position: relative;
-            background: mediumpurple;
-            background: ${this._fetchImage('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg')};
+            background-color: mediumpurple;
+            background-image: url('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg');
             background-attachment: var(--background-attachment);
             background-size: cover;
         }
@@ -66,8 +66,8 @@ class daniPani extends LitElement {
         .parallax {
             height: 50vh;
             position: relative;
-            background: grey;
-            background: ${this._fetchImage('src/image/abstract-wallpaper-1442844111BON.jpg')};
+            background-color: grey;
+            background-image: url('src/image/abstract-wallpaper-1442844111BON.jpg');
             background-size: cover;
             background-repeat: no-repeat;
         }
