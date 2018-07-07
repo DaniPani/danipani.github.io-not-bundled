@@ -143,7 +143,7 @@
     <div class="hero-content">
       <h1>"Hi, I'm Daniel..."</h1>
     </div>
-    <scroll-down onclick="import('/node_modules/jump.js/dist/jump.module.js').then(jump => jump.default(document.querySelector('.parallax')))"></scroll-down>
+    <scroll-down onclick="scrollDown()" onkeydown="scrollDown()"></scroll-down>
   </section>
   <section class="parallax fixed">
     <div class="parallax-content">
@@ -208,7 +208,7 @@
       });
     }
   </script>
-  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121810217-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -219,6 +219,9 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-121810217-1');
+  </script>
+  <script type="module">
+    window.scrollDown = () => import('./node_modules/jump.js/dist/jump.module.js').then(jump => jump.default(document.querySelector('.parallax')))
   </script>
 
 </body>
