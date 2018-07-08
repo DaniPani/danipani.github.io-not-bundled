@@ -56,45 +56,41 @@
       }
     }
 
-    section {
-      width: 100%;
-      margin: 0;
-    }
-
-    .hero {
-      height: 100vh;
-      position: relative;
-      background-color: mediumpurple;
-      background-image: url('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg');
-      background-attachment: var(--background-attachment);
-      background-size: cover;
-    }
-
-    .hero-content {
-      font-size: var(--hero-font-size);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-    }
-
+    .hero,
     .parallax {
-      height: 50vh;
       position: relative;
-      background-color: grey;
-      background-image: url('src/image/abstract-wallpaper-1442844111BON.jpg');
       background-size: cover;
       background-repeat: no-repeat;
     }
 
+    .hero {
+      height: 100vh;
+      background-color: mediumpurple;
+      background-image: url('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg');
+      background-attachment: var(--background-attachment);
+    }
+
+    .parallax {
+      height: 50vh;
+      background-color: grey;
+      background-image: url('src/image/abstract-wallpaper-1442844111BON.jpg');
+    }
+
+    .hero-content,
     .parallax-content {
-      font-size: var(--title-font);
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
+    }
+
+    .hero-content {
+      font-size: var(--hero-font-size);
+    }
+
+    .parallax-content {
+      font-size: var(--title-font);
     }
 
     .gradient {
