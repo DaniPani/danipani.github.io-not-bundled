@@ -134,6 +134,23 @@
       margin-top: 5vh
     }
   </style>
+  <style>
+    @keyframes scrollDownAnimation {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
   <noscript>I can't do anything for you, if you don't enable Javascript!</noscript>
   <section class="hero">
     <div class="hero-content">
@@ -159,6 +176,9 @@
   <section class="gradient">
     <social-button></social-button>
   </section>
+  <script type="module">
+    window.scrollDown = () => import('./node_modules/jump.js/dist/jump.module.js').then(jump => jump.default(document.querySelector('.parallax')))
+  </script>
   <script>
     if ('serviceWorker' in navigator) {
       // Delay registration until after the page has loaded, to ensure that our
@@ -215,9 +235,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-121810217-1');
-  </script>
-  <script type="module">
-    window.scrollDown = () => import('./node_modules/jump.js/dist/jump.module.js').then(jump => jump.default(document.querySelector('.parallax')))
   </script>
 
 </body>
