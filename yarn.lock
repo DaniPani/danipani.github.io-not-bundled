@@ -8,9 +8,9 @@
   dependencies:
     "@polymer/lit-element" "^0.5.1"
 
-"@bit/danipani.projects.components.scroll-down@^1.0.0":
-  version "1.0.0"
-  resolved "https://node.bitsrc.io/danipani.projects.components.scroll-down/-/danipani.projects.components.scroll-down-1.0.0.tgz#6dd100b851496db75db027e9d526722737916704"
+"@bit/danipani.projects.components.scroll-down@^1.0.1":
+  version "1.0.1"
+  resolved "https://node.bitsrc.io/danipani.projects.components.scroll-down/-/danipani.projects.components.scroll-down-1.0.1.tgz#c8dd87b41ea82c8188245fd89ebac360dae99504"
   dependencies:
     "@polymer/lit-element" "^0.5.1"
 
