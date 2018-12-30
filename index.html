@@ -1,242 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
-  <title>A DaniPani's (Daniel Panero) Portfolio</title>
-  <meta name="description" content="Hi, I'm Daniel, a junior Developer and welcome to my Portfolio, which is completely written in ES6 Features with LitElement and Polymer.">
-  <link rel="manifest" href="/manifest.json">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes" />
+  <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#e74c3c" />
 
-  <script type="module" src="node_modules/@bit/danipani.projects.components.button-3d/button-3d.js"></script>
-  <script type="module" src="node_modules/@bit/danipani.projects.components.scroll-down/scroll-down.js"></script>
-  <script type="module" src="node_modules/@bit/danipani.projects.components.social-button/social-button.js"></script>
+  <script type="module">
+      import './serviceWorker.js'
+      import '@webcomponents/webcomponentsjs/webcomponents-loader.js'
 
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://danipani.github.io/src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg">
-  <meta property="og:title" content="A DaniPani's (Daniel Panero) Portfolio">
-  <meta property="og:description" content="Hi, I'm Daniel, a junior Developer and welcome to my Portfolio, which is completely written in ES6 Features with LitElement and Polymer.">
-  <meta property="og:site_name" content="DaniPani Portfolio">
-  <meta property="og:url" content="https://danipani.github.io">
+      import socialButton from '@bit/danipani.projects.global.social-button'
+      import button3D from '@bit/danipani.projects.global.button-3d'
+      import scrollDown from '@bit/danipani.projects.global.scroll-down'
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://danipani.github.io/src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg">
-  <meta name="twitter:title" content="A DaniPani's (Daniel Panero) Portfolio">
-  <meta name="twitter:description" content="Hi, I'm Daniel, a junior Developer and welcome to my Portfolio, which is completely written in ES6 Features with LitElement and Polymer.">
-  <meta name="twitter:site" content="https://danipani.github.io">
+      import jump from 'jump.js'
 
+      customElements.define('social-button', socialButton)
+      customElements.define('button-3d', button3D)
+      customElements.define('scroll-down', scrollDown)
+
+      window.scrollDown = () => jump('.fixed')
+    </script>
 </head>
 
 <body>
   <style>
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
+        margin: 0;
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
+          Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+      }
 
-    :root {
-      --hero-font-size: 5.4em;
-      --container-padding: 5em;
-      --title-font: 3em;
-      --subtitle-font: 2.5em;
-      --background-attachment: fixed;
-      --btn-3d-background-color: #e74c3c;
-      --btn-3d-box-shadow-color: #CE3323
-    }
-
-    @media all and (max-width: 35em), (orientation: landscape) and (max-height: 35em)  {
       :root {
-        --container-padding: 1.5em;
-        --title-font: 2.5em;
-        --subtitle-font: 1.5em;
-        --background-attachment: scroll;
-        --hero-font-size: 2em
+        --parallax-font-size: 5.5em;
+        --title-font: 4.25em;
+        --subtitle-font: calc(var(--title-font) * 0.6);
+        --container-padding: var(--title-font);
+        --background-attachment: fixed;
+        --btn-3d-background-color: #e74c3c;
+        --btn-3d-box-shadow-color: #ce3323;
+        --scroll-down-size: 0.25em
       }
-    }
 
-    .hero,
-    .parallax {
-      position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .hero {
-      height: 100vh;
-      background-color: mediumpurple;
-      background-image: url('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg');
-      background-attachment: var(--background-attachment);
-    }
-
-    .parallax {
-      height: 50vh;
-      background-color: grey;
-      background-image: url('src/image/abstract-wallpaper-1442844111BON.jpg');
-    }
-
-    .hero-content,
-    .parallax-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-    }
-
-    .hero-content {
-      font-size: var(--hero-font-size);
-    }
-
-    .parallax-content {
-      font-size: var(--title-font);
-    }
-
-    .gradient {
-      background: #DAE2F8;
-      background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
-      background: linear-gradient(to right, #D6A4A4, #DAE2F8);
-      padding-top: 20px
-    }
-
-    .container {
-      padding-top: var(--container-padding);
-      padding-right: var(--container-padding);
-      padding-left: var(--container-padding);
-    }
-
-    .left {
-      text-align: left;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .title {
-      font-size: var(--title-font)
-    }
-
-    .subtitle {
-      font-size: var(--subtitle-font)
-    }
-
-    .white {
-      color: #fff
-    }
-
-    .shadow {
-      text-shadow: 6px 4px 1px black;
-    }
-
-    social-button {
-      margin-top: 5vh
-    }
-  </style>
-  <style>
-    @keyframes scrollDownAnimation {
-      0% {
-        opacity: 0;
+      @media all and (max-width: 35em) and (orientation: portrait), all and (max-width: 48em) and (orientation: landscape)  {
+        :root {
+          --parallax-font-size: 2.5em;
+          --title-font: 2.5em;
+          --container-padding: var(--subtitle-font);
+          --background-attachment: scroll;
+          --scroll-down-size: 0.5em
+        }
       }
-      30% {
-        opacity: 1;
+
+      .parallax,
+      .fixed {
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
       }
-      60% {
-        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
-        opacity: 0;
+
+      .parallax {
+        min-height: 100vh;
+        background-color: mediumpurple;
+        background-image: url('src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg');
+        background-attachment: var(--background-attachment);
+        font-size: var(--parallax-font-size);
       }
-      100% {
-        opacity: 0;
+
+      .fixed {
+        background-color: grey;
+        background-image: url('src/image/abstract-wallpaper-1442844111BON.jpg');
       }
-    }
-  </style>
+
+      .container {
+        padding: var(--container-padding);
+      }
+
+      .gradient-background {
+        background: #dae2f8;
+        background: -webkit-linear-gradient(to right, #d6a4a4, #dae2f8);
+        background: linear-gradient(to right, #d6a4a4, #dae2f8);
+      }
+
+      h1 {
+        width: 100vw;
+      }
+
+      .title {
+        font-size: var(--title-font);
+      }
+
+      .subtitle {
+        font-size: var(--subtitle-font);
+      }
+
+      .shadow {
+        text-shadow: 6px 4px 1px black;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      scroll-down {
+        font-size: var(--scroll-down-size);
+        min-height: 10.25em;
+        min-width: 10.25em;
+      }
+
+      @keyframes scrollDownAnimation {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        60% {
+            box-shadow: 0 0 0 3.75em rgba(255, 255, 255, .1);
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
+
+    </style>
   <noscript>I can't do anything for you, if you don't enable Javascript!</noscript>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>"Hi, I'm Daniel..."</h1>
-    </div>
+  <section class="parallax">
+    <h1 class="center">Hi, I'm Daniel...</h1>
     <scroll-down onclick="scrollDown()" onkeydown="scrollDown()"></scroll-down>
   </section>
-  <section class="parallax fixed">
-    <div class="parallax-content">
-      <h2 class="shadow white">And I love coding</h2>
-    </div>
+  <section class="fixed container">
+    <h2 class="shadow center title">And I love coding</h2>
   </section>
   <section>
-    <div class="container center">
-      <h2 class="left title">But... What do I know?</h2>
-      <ul class="left subtitle">
-        <li>Javascript (ES8), NodeJS, HTML5, VueJS, CSS3, Python...</li>
+    <div class="container">
+      <h2 class="title">But... What do I know?</h2>
+      <ul class="subtitle">
+        <li>
+          Javascript (ES8), NodeJS, HTML5, VueJS, CSS3, Python, LitHtml,
+          Flutter...
+        </li>
         <li>In the past: Java Android, Visual Basic, C#</li>
       </ul>
-      <button-3d href="mailto:panero.daniel@gmail.com">CONTACT ME!</button-3d>
+      <div class="center">
+        <button-3d href="mailto:panero.daniel@gmail.com">CONTACT ME!</button-3d>
+      </div>
     </div>
   </section>
-  <section class="gradient">
+  <section class="gradient-background">
     <social-button></social-button>
   </section>
-  <script type="module">
-    window.scrollDown = () => import('./node_modules/jump.js/dist/jump.module.js').then(jump => jump.default(document.querySelector('.parallax')))
-  </script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      // Delay registration until after the page has loaded, to ensure that our
-      // precaching requests don't degrade the first visit experience.
-      // See https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/registration
-      window.addEventListener('load', function () {
-        // Your service-worker.js *must* be located at the top-level directory relative to your site.
-        // It won't be able to control pages unless it's located at the same level or higher than them.
-        // *Don't* register service worker file in, e.g., a scripts/ sub-directory!
-        // See https://github.com/slightlyoff/ServiceWorker/issues/468
-        navigator.serviceWorker.register('service-worker.js').then(function (reg) {
-          // updatefound is fired if service-worker.js changes.
-          reg.onupdatefound = function () {
-            // The updatefound event implies that reg.installing is set; see
-            // https://w3c.github.io/ServiceWorker/#service-worker-registration-updatefound-event
-            var installingWorker = reg.installing;
 
-            installingWorker.onstatechange = function () {
-              switch (installingWorker.state) {
-                case 'installed':
-                  if (navigator.serviceWorker.controller) {
-                    // At this point, the old content will have been purged and the fresh content will
-                    // have been added to the cache.
-                    // It's the perfect time to display a "New content is available; please refresh."
-                    // message in the page's interface.
-                    console.log('New or updated content is available.');
-                  } else {
-                    // At this point, everything has been precached.
-                    // It's the perfect time to display a "Content is cached for offline use." message.
-                    console.log('Content is now available offline!');
-                  }
-                  break;
-
-                case 'redundant':
-                  console.error('The installing service worker became redundant.');
-                  break;
-              }
-            };
-          };
-        }).catch(function (e) {
-          console.error('Error during service worker registration:', e);
-        });
-      });
-    }
-  </script>
-  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121810217-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || []
 
     function gtag() {
-      dataLayer.push(arguments);
+      dataLayer.push(arguments)
     }
-    gtag('js', new Date());
+    gtag('js', new Date())
 
-    gtag('config', 'UA-121810217-1');
+    gtag('config', 'UA-121810217-1')
   </script>
-
 </body>
 
 </html>

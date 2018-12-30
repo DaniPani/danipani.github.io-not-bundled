@@ -16,7 +16,6 @@
     },
     "js": {
       "minify": true,
-      "compile":true,
       "transformModulesToAmd": true
     }
   }],
