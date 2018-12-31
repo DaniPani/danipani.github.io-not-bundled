@@ -22,8 +22,6 @@
   "entrypoint": "index.html",
   "extraDependencies": [
     "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**/*.js",
-    "robots.txt",
-    "sitemap.xml"
+    "node_modules/@webcomponents/webcomponentsjs/**/*.js"
   ]
 }

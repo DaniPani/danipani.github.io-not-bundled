@@ -1,8 +1,12 @@
 const gulp = require('gulp')
 const image = require('gulp-image')
 const gulpSeo = require('gulp-seo')
+const gulpSitemap = require('gulp-sitemap')
+const gulpRobots = require('gulp-robots')
 
-const { exec } = require('child_process')
+const {
+  exec
+} = require('child_process')
 
 gulp.task('image', () =>
   gulp
@@ -22,27 +26,43 @@ gulp.task('build', () =>
   })
 )
 
-gulp.task('seo', () =>
-  gulp
-    .src('build/default/index.html')
-    .pipe(
-      gulpSeo({
-        list: ['og', 'se', 'schema', 'twitter'],
-        meta: {
-          title: "A DaniPani's (Daniel Panero) Portfolio",
-          description:
-            "Hi, I'm Daniel, a junior Developer and welcome to my Portfolio, which is completely written in ES6 Features with LitElement and Polymer.",
-          author: 'DaniPani Portfolio',
-          image:
-            'https://danipani.github.io/src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg',
-          site_name: 'DaniPani Portfolio',
-          type: 'website',
-          concact: 'panero.daniel@gmail.com',
-          url: 'https://danipani.github.io'
-        }
+gulp.task('seo',
+  gulp.parallel(
+    () => gulp
+      .src('build/default/index.html')
+      .pipe(
+        gulpSeo({
+          list: ['og', 'se', 'schema', 'twitter'],
+          meta: {
+            title: "A DaniPani's (Daniel Panero) Portfolio",
+            description: "Hi, I'm Daniel, a junior Developer and welcome to my Portfolio, which is completely written in ES6 Features with LitElement and Polymer.",
+            author: 'DaniPani Portfolio',
+            image: 'https://danipani.github.io/src/image/abstract-wallpaper-47342-48869-hd-wallpapers.jpg',
+            site_name: 'DaniPani Portfolio',
+            type: 'website',
+            concact: 'panero.daniel@gmail.com',
+            url: 'https://danipani.github.io'
+          }
+        })
+      )
+      .pipe(gulp.dest('build/default/')),
+    () => gulp
+      .src('build/default/**/*.html', {
+        read: false
       })
-    )
-    .pipe(gulp.dest('build/default/'))
+      .pipe(gulpSitemap({
+        siteUrl: 'https://danipani.github.io/'
+      }))
+      .pipe(gulp.dest('./build/default')),
+    () => gulp
+      .src('index.html')
+      .pipe(gulpRobots({
+        useragent: '*',
+        allow: ['/'],
+        disallow: []
+      }))
+      .pipe(gulp.dest('./build/default/'))
+  )
 )
 
 gulp.task('clean', () =>

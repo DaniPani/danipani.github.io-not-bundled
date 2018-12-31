@@ -16,6 +16,8 @@
     "eslint-plugin-standard": "^4.0.0",
     "gulp": "4.0.0",
     "gulp-image": "4.3.0",
-    "gulp-seo": "^1.0.2"
+    "gulp-robots": "^2.0.4",
+    "gulp-seo": "^1.0.2",
+    "gulp-sitemap": "^6.1.0"
   }
 }
