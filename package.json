@@ -4,20 +4,20 @@
     "@bit/danipani.projects.global.button-3d": "^0.0.1",
     "@bit/danipani.projects.global.scroll-down": "^0.0.9",
     "@bit/danipani.projects.global.social-button": "^0.0.5",
-    "jump.js": "^1.0.2"
+    "jump.js": "1.0.2"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.1.3",
-    "eslint": "^5.9.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "@webcomponents/webcomponentsjs": "2.1.3",
+    "eslint": "5.9.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "8.0.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
     "gulp": "4.0.0",
     "gulp-image": "4.3.0",
-    "gulp-robots": "^2.0.4",
-    "gulp-seo": "^1.0.2",
-    "gulp-sitemap": "^6.1.0"
+    "gulp-robots": "2.0.4",
+    "gulp-seo": "1.0.2",
+    "gulp-sitemap": "6.1.0"
   }
 }

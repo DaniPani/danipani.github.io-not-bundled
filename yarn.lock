@@ -92,7 +92,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.5.tgz#7e7ea1a9b34d2c8d704cb0b755dffbcda34741ad"
   integrity sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
 
-"@webcomponents/webcomponentsjs@^2.1.3":
+"@webcomponents/webcomponentsjs@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.1.3.tgz#f7430c6efe52ab06f69d219fddd32afd2758f683"
   integrity sha512-0UHJNY88lR3pnEYtBVT7F8cuuxOiITQGWJa0LxoELqkBSB7IabzJFOj5K99PajD3CGAsWpjB0CAeijfe376Y1w==
@@ -1502,7 +1502,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-standard@^12.0.0:
+eslint-config-standard@12.0.0:
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-12.0.0.tgz#638b4c65db0bd5a41319f96bba1f15ddad2107d9"
   integrity sha512-COUz8FnXhqFitYj4DTqHzidjIL/t4mumGZto5c7DrBpvWoie+Sn3P4sLEzUGeYhRElWuFEf8K1S1EfvD1vixCQ==
@@ -1531,7 +1531,7 @@ eslint-plugin-es@^1.3.1:
     eslint-utils "^1.3.0"
     regexpp "^2.0.1"
 
-eslint-plugin-import@^2.14.0:
+eslint-plugin-import@2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
   integrity sha512-FpuRtniD/AY6sXByma2Wr0TXvXJ4nA/2/04VPlfpmUDPOpOY264x+ILiwnrk/k4RINgDAyFZByxqPUbSQ5YE7g==
@@ -1547,7 +1547,7 @@ eslint-plugin-import@^2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-node@^8.0.0:
+eslint-plugin-node@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-8.0.0.tgz#fb9e8911f4543514f154bb6a5924b599aa645568"
   integrity sha512-Y+ln8iQ52scz9+rSPnSWRaAxeWaoJZ4wIveDR0vLHkuSZGe44Vk1J4HX7WvEP5Cm+iXPE8ixo7OM7gAO3/OKpQ==
@@ -1559,12 +1559,12 @@ eslint-plugin-node@^8.0.0:
     resolve "^1.8.1"
     semver "^5.5.0"
 
-eslint-plugin-promise@^4.0.1:
+eslint-plugin-promise@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.1.tgz#2d074b653f35a23d1ba89d8e976a985117d1c6a2"
   integrity sha512-Si16O0+Hqz1gDHsys6RtFRrW7cCTB6P7p3OJmKp3Y3dxpQE2qwOA7d3xnV+0mBmrPoi0RBnxlCKvqu70te6wjg==
 
-eslint-plugin-standard@^4.0.0:
+eslint-plugin-standard@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.0.tgz#f845b45109c99cd90e77796940a344546c8f6b5c"
   integrity sha512-OwxJkR6TQiYMmt1EsNRMe5qG3GsbjlcOhbGUBY4LtavF9DsLaTcoR+j2Tdjqi23oUwKNUqX7qcn5fPStafMdlA==
@@ -1587,7 +1587,7 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.9.0:
+eslint@5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.9.0.tgz#b234b6d15ef84b5849c6de2af43195a2d59d408e"
   integrity sha512-g4KWpPdqN0nth+goDNICNXGfJF7nNnepthp46CAlJoJtC5K/cLu3NgCM3AHu1CkJ5Hzt9V0Y0PBAO6Ay/gGb+w==
@@ -2340,14 +2340,14 @@ gulp-rename@^1.2.0:
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.4.0.tgz#de1c718e7c4095ae861f7296ef4f3248648240bd"
   integrity sha512-swzbIGb/arEoFK89tPY58vg3Ok1bw+d35PfUNwWqdo7KM4jkmuGA78JiDNqR+JeZFaeeHnRg9N7aihX3YPmsyg==
 
-gulp-robots@^2.0.4:
+gulp-robots@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/gulp-robots/-/gulp-robots-2.0.4.tgz#cfee14a3325caaa10fdf134274406a98d65a9d25"
   integrity sha1-z+4UozJcqqEP3xNCdEBqmNZanSU=
   dependencies:
     robots-generator "*"
 
-gulp-seo@^1.0.2:
+gulp-seo@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/gulp-seo/-/gulp-seo-1.0.2.tgz#3aca59cd6a6b9285a8a0c0d3d9638d9257d6f9ac"
   integrity sha512-gwN8O8SIBCC2P1TuI6qEgUOZgHpBtJZWlWxe43D1XSBfVdcVQMoe9gDh1p01Zo31pO3ZS3S9ihTR+pjM4xLnlw==
@@ -2358,6 +2358,20 @@ gulp-seo@^1.0.2:
     gulp-util "^3.0.8"
     object-assign "^4.1.1"
     through2 "^2.0.3"
+
+gulp-sitemap@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-sitemap/-/gulp-sitemap-6.1.0.tgz#e086dea94c9c32fc2384b260205f34b76e9bb50b"
+  integrity sha512-nQovM7DhddlfhIgfhVi/4JChxmsyEhCIxNgcVXb1r7FluSGjHMddBvFLXnxru/VouwtoF344fFBKgpHATRVMjg==
+  dependencies:
+    chalk "^2.4.1"
+    fancy-log "^1.3.2"
+    lodash "^4.17.11"
+    multimatch "^2.0.0"
+    plugin-error "^1.0.1"
+    slash "^2.0.0"
+    through2 "^2.0.0"
+    vinyl "^2.2.0"
 
 gulp-sitemap@^4.3.0:
   version "4.3.0"
@@ -2372,20 +2386,6 @@ gulp-sitemap@^4.3.0:
     slash "^1.0.0"
     through2 "^2.0.0"
     vinyl "^2.1.0"
-
-gulp-sitemap@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/gulp-sitemap/-/gulp-sitemap-6.1.0.tgz#e086dea94c9c32fc2384b260205f34b76e9bb50b"
-  integrity sha512-nQovM7DhddlfhIgfhVi/4JChxmsyEhCIxNgcVXb1r7FluSGjHMddBvFLXnxru/VouwtoF344fFBKgpHATRVMjg==
-  dependencies:
-    chalk "^2.4.1"
-    fancy-log "^1.3.2"
-    lodash "^4.17.11"
-    multimatch "^2.0.0"
-    plugin-error "^1.0.1"
-    slash "^2.0.0"
-    through2 "^2.0.0"
-    vinyl "^2.2.0"
 
 gulp-sourcemaps@1.6.0:
   version "1.6.0"
@@ -3078,7 +3078,7 @@ jstransformer@1.0.0:
     is-promise "^2.0.0"
     promise "^7.0.1"
 
-jump.js@^1.0.2:
+jump.js@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
   integrity sha1-4GQbR/QKOPITnCX9oFAL8o5DAVo=
